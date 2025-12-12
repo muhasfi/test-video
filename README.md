@@ -1,10 +1,21 @@
-php artisan storage:link
+ - php artisan storage:link
+   >
  - npm install 
  - npm run build
- - jika db tidak bisa di import
-jalankan 
-- php artisan migrate
-- php artisan db:seed
+   >
+ - jika db tidak bisa di import jalankan
+   >
+ - php artisan migrate
+ - php artisan db:seed
+
+> Jika project ini baru di-clone, folder `storage/app/public` kemungkinan **kosong**.  
+> Di database tetap ada **path file lama**, tetapi file aslinya **tidak ada**, sehingga:
+>
+> - Saat melakukan **edit data tanpa mengganti file**, sistem tidak dapat menemukan file tersebut.
+>
+> **Solusi:**
+> - Upload ulang file saat edit, atau
+> - Hapus path file lama dari database.
 
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
