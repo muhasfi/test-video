@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->text('description')->nullable();
-            $table->string('video_url'); // isi link atau path file
+            $table->string('video_url');
             $table->timestamps();
             $table->softDeletes();
         });
