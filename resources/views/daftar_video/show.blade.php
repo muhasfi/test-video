@@ -7,16 +7,12 @@
 @php
     $url = $video->video_url;
 
-    // Cek apakah link YouTube
     $isYoutube = preg_match('/(youtube\.com|youtu\.be)/', $url);
 
-    // Convert ke embed
     if ($isYoutube) {
-        // youtu.be/xxxx
         if (preg_match('/youtu\.be\/([^\?]+)/', $url, $m)) {
             $embed = "https://www.youtube.com/embed/" . $m[1];
         }
-        // youtube.com/watch?v=xxxx
         elseif (preg_match('/v=([^\&]+)/', $url, $m)) {
             $embed = "https://www.youtube.com/embed/" . $m[1];
         }
@@ -32,7 +28,6 @@
                     <h3>{{ $video->title }}</h3>
                 </div>
 
-                {{-- Jika YouTube tampilkan embed --}}
                 @if ($isYoutube)
                     <iframe width="100%" height="480"
                         src="{{ $embed }}"
@@ -40,7 +35,6 @@
                         allowfullscreen>
                     </iframe>
                 @else
-                    {{-- Jika bukan YouTube tampilkan video biasa --}}
                     <video width="100%" height="480" controls>
                         <source src="{{ $video->video_url }}" type="video/mp4">
                         Browser Anda tidak mendukung tag video.

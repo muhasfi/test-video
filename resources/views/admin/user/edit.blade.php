@@ -16,7 +16,7 @@
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>
                         <li class="breadcrumb-item"><a href="{{ route('users.index') }}">User</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">New</li>
+                        <li class="breadcrumb-item active" aria-current="page">Edit</li>
                     </ol>
                 </nav>
             </div>

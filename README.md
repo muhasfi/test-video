@@ -1,7 +1,7 @@
 php artisan storage:link
  - npm install 
  - npm run build
-jika db tidak bisa di import
+ - jika db tidak bisa di import
 jalankan 
 - php artisan migrate
 - php artisan db:seed

@@ -12,7 +12,6 @@ class CustomerRequestController extends Controller
 
     public function index()
     {
-        // load video + request & access relasi untuk user ini
         $videos = Video::with([
             'requests' => function ($q) {
                 $q->where('user_id', Auth::id());
